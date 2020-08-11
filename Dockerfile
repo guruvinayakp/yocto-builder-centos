@@ -3,7 +3,7 @@ FROM centos:7.8.2003
 RUN yum -y update
 RUN yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm
 RUN yum -y install git
-RUN yum -y install sudo nfs-utils python3-pip.noarch file gawk make wget tar bzip2 gzip python unzip perl patch diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath socat perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue python34-pip xz which SDL-devel xtermsudo pip3 install GitPython jinja2
+RUN yum -y install sudo rsync nfs-utils python3-pip.noarch file gawk make wget tar bzip2 gzip python unzip perl patch diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath socat perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue python34-pip xz which SDL-devel xtermsudo pip3 install GitPython jinja2
 
 RUN sudo git clone -b v1.10.0 https://gerrit.googlesource.com/git-repo /tmp/git-repo
 RUN sudo cp /tmp/git-repo/repo /usr/bin/repo
